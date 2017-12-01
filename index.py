@@ -36,12 +36,16 @@ divided("Python Loops Starts Here");
 # for x in range(3, 8, 2):
 #     print(x)
 
-number=20
+number=40
 for j in range(1,number):
-    if j < number/2 :
-        print(((number-j)-number/2)*" "+j*" *")
+    if j < number/4*1 :
+        print((number-j)*" "+j*" *")
+    elif j < number/4*2:
+        print(j*" "+(number-j)*" *")
+    elif j < number/4*3 :
+        print((number-j)*" "+j*" *")
     else :
-        print((j- number/2)*" "+(number-j)*" *")
+        print(j*" "+(number-j)*" *")
 enter()
 
 
