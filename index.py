@@ -1,6 +1,6 @@
 import os
 os.system('clear')
-
+from fibo import fib, fib2
 print("""
  _______  __   __  _______  __   __  _______  __    _
 |    _  ||  |_|  ||_     _||  |_|  ||   _   ||   |_| |
@@ -10,10 +10,20 @@ print("""
 """)
 
 # helpers
-def divided(msg=""):
+def divided(msg="",n=30):
     print """
-==================="""+msg+ """==========================
+"""+(n)*"="+msg+(n)*"="+"""
 """
+def printStar(number=20):
+    for j in range(1,number):
+        if j < number/4*1 :
+            print((number-j)*" "+j*" *")
+        elif j < number/4*2:
+            print(j*" "+(number-j)*" *")
+        elif j < number/4*3 :
+            print((number-j)*" "+j*" *")
+        else :
+            print(j*" "+(number-j)*" *")
 
 def enter(msg=""):
     print "\n"
@@ -36,16 +46,10 @@ divided("Python Loops Starts Here");
 # for x in range(3, 8, 2):
 #     print(x)
 
-number=40
-for j in range(1,number):
-    if j < number/4*1 :
-        print((number-j)*" "+j*" *")
-    elif j < number/4*2:
-        print(j*" "+(number-j)*" *")
-    elif j < number/4*3 :
-        print((number-j)*" "+j*" *")
-    else :
-        print(j*" "+(number-j)*" *")
+
+number=32
+# printStar()
+fib(500)
 enter()
 
 
